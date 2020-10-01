@@ -19,7 +19,7 @@ exports.create = (req, res) => {
         res.send(data);
     }).catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while creating the Note."
+            message: err.message || "Some error occurred while creating the note."
         });
     });
 };
@@ -63,7 +63,7 @@ exports.update = (req, res) => {
 
     if(!req.body.content) {
         return res.status(400).send({
-            message: "Note content can not be empty"
+            message: "Note content cannot be empty"
         });
     }
 
